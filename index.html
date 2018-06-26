@@ -33,13 +33,26 @@
         }
 
         function CountryList(){
+            let countries =[{
+                name:"Poland",
+                capital:"Warsaw",
+                alpha2:"PL"
+            },
+            {
+                name:"France",
+                capital:"Paris",
+                alpha2:"FR"
+            }];
+            //fetch(``)
+            
             return(
                 <table>
                    <CountryListHeader/>
                     <tbody>
-                        <CountryListItem name="Poland" capital="Warsaw" alpha2="PL" />
-                        <CountryListItem name="Belgium" capital="Brussels" alpha2="BE" />
-                        <CountryListItem name="France" capital="Paris" alpha2="FR" />
+                        {
+                            countries.map(c => 
+                            <CountryListItem name={c.name} capital={c.capital} alpha2={c.alpha2} key={c.alpha2} />)
+                        }
                     </tbody>
                 </table>
             )
