@@ -11,12 +11,47 @@
 </head>
 
 <body>
-    <main id="app"></main>
+    <div id="app">
+    </div>
     <script type="text/babel">
+
+        function App(){
+            return(
+                <div>
+                    <AppHeader/>
+                    <main>
+                        <CountryList/>
+                    </main>
+                </div>
+            )
+        }
+
+        function AppHeader(){
+            return(
+                <header>Header Template</header>
+            )
+        }
+
+        function CountryList(){
+            return(
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Capital</th>
+                            <th>Alpha2code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+
+                </table>
+            )
+        }
         ReactDOM.render(
-            <div>Hello</div>,
+            <App/>,
             document.getElementById("app")
-        )
+        );
     </script>
 </body>
 
