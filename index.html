@@ -35,17 +35,35 @@
         function CountryList(){
             return(
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Capital</th>
-                            <th>Alpha2code</th>
-                        </tr>
-                    </thead>
+                   <CountryListHeader/>
                     <tbody>
+                        <CountryListItem name="Poland" capital="Warsaw" alpha2="PL" />
+                        <CountryListItem name="Belgium" capital="Brussels" alpha2="BE" />
+                        <CountryListItem name="France" capital="Paris" alpha2="FR" />
                     </tbody>
-
                 </table>
+            )
+        }
+
+        function CountryListHeader(){
+            return(
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Capital</th>
+                        <th>Alpha2code</th>
+                    </tr>
+                </thead>
+            )
+        }
+
+        function CountryListItem({name, capital, alpha2}){
+            return(
+                <tr>
+                    <td>{name}</td>
+                    <td>{capital}</td>
+                    <td>{alpha2}</td>
+                </tr>
             )
         }
         ReactDOM.render(
