@@ -4,27 +4,13 @@
 
 class CountryList extends React.Component {
     render() {
-        let countries = [{
-            name: "Poland",
-            capital: "Warsaw",
-            alpha2: "PL"
-        },
-        {
-            name: "France",
-            capital: "Paris",
-            alpha2: "FR"
-        }];
-        fetch("https://restcountries.eu/rest/v2/all")
-            .then(response => response.json())
-            .then(response => console.log(response));
-
         return (
             <table>
                 <CountryListHeader />
                 <tbody>
                     {
-                        countries.map(c =>
-                            <CountryListItem name={c.name} capital={c.capital} alpha2={c.alpha2} key={c.alpha2} />)
+                        this.props.countries.map(country =>
+                            <CountryListItem name={country.name} capital={country.capital} alpha2={country.alpha2} key={country.alpha2} />)
                     }
                 </tbody>
             </table>
