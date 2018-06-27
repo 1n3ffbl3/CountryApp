@@ -13,72 +13,13 @@
 <body>
     <div id="app">
     </div>
-    <script type="text/babel">
-
-        function App(){
-            return(
-                <div>
-                    <AppHeader/>
-                    <main>
-                        <CountryList/>
-                    </main>
-                </div>
-            )
-        }
-
-        function AppHeader(){
-            return(
-                <header>Header Template</header>
-            )
-        }
-
-        function CountryList(){
-            let countries =[{
-                name:"Poland",
-                capital:"Warsaw",
-                alpha2:"PL"
-            },
-            {
-                name:"France",
-                capital:"Paris",
-                alpha2:"FR"
-            }];
-            //fetch(``)
-            
-            return(
-                <table>
-                   <CountryListHeader/>
-                    <tbody>
-                        {
-                            countries.map(c => 
-                            <CountryListItem name={c.name} capital={c.capital} alpha2={c.alpha2} key={c.alpha2} />)
-                        }
-                    </tbody>
-                </table>
-            )
-        }
-
-        function CountryListHeader(){
-            return(
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Capital</th>
-                        <th>Alpha2code</th>
-                    </tr>
-                </thead>
-            )
-        }
-
-        function CountryListItem({name, capital, alpha2}){
-            return(
-                <tr>
-                    <td>{name}</td>
-                    <td>{capital}</td>
-                    <td>{alpha2}</td>
-                </tr>
-            )
-        }
+    
+    <script type="text/babel" src="/static/js/components/CountryListItem.js"></script>
+    <script type="text/babel" src="/static/js/components/CountryListHeader.js"></script>
+    <script type="text/babel" src="/static/js/components/CountryList.js"></script>
+    <script type="text/babel" src="/static/js/components/AppHeader.js"></script>
+    <script type="text/babel" src="/static/js/components/App.js"></script>
+    <script type="text/babel">  
         ReactDOM.render(
             <App/>,
             document.getElementById("app")
