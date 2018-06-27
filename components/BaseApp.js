@@ -3,13 +3,7 @@ class BaseApp extends React.Component {
         debug: false,
         countriesArray:[]
     };
-    // componentDidMount(){
-    //     fetch("https://restcountries.eu/rest/v2/all")
-    //     .then(response => {
-    //         return response.json()
-    //     })
-    //     .then(json => this.handleApiResponse);
-    // }
+
     handleApiResponse(responseJson) {
         let temporaryCountries = [];
         responseJson.map(country => temporaryCountries.push({
