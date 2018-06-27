@@ -9,8 +9,16 @@ app.use(cors());
 
 app.use('/static/js/components', express.static('components'));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+app.get('/all', (req, res) => {
+    res.sendFile(path.join(__dirname, 'allCountries.html'));
 });
+
+app.get('/eu', (req, res) => {
+    res.sendFile(path.join(__dirname, 'euCountries.html'));
+})
+
+app.get('/search', (req, res) => {
+    res.sendFile(path.join(__dirname, 'searchCountries.html'));
+})
 
 app.listen(5000, () => console.log(`Server started on port ${PORT}`));
