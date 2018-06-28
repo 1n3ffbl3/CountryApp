@@ -1,8 +1,12 @@
 class BaseApp extends React.Component {
-    state = {
-        debug: false,
-        countriesArray:[]
-    };
+    constructor(){ 
+        super();
+        this.state = {
+            debug: false,
+            countriesArray:[],
+            showPopup:false
+        };
+    }
 
     handleApiResponse(responseJson) {
         let temporaryCountries = [];
