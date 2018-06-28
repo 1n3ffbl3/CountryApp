@@ -10,7 +10,8 @@
         .then(response => {
             return response.json()
         })
-        .then(json => this.handleApiResponse(json));
+        .then(json => this.handleApiResponse(json))
+        .catch(error => console.log(error));
     }
     
 }

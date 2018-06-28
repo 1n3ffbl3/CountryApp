@@ -77,6 +77,7 @@ class CountryPopup extends React.Component {
                 }
             });
             console.log(this.state.country);
-        });
+        })
+        .catch(error => console.log(error));
     }
 }
