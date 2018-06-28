@@ -11,7 +11,7 @@
             return response.json()
         })
         .then(json => this.handleApiResponse(json))
-        .catch(error => console.log(error);
+        .catch(error => console.log(error));
     }
     
 }

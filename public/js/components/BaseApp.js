@@ -26,7 +26,6 @@ class BaseApp extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.onClickHandler}>Click</button>
                 <AppHeader />
                 <main>
                     {
@@ -36,8 +35,5 @@ class BaseApp extends React.Component {
                 </main>
             </div>
         )
-    }
-    onClickHandler(){
-        alert("You have just pushed the button!");
     }
 }
