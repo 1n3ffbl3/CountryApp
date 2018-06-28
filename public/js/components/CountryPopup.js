@@ -20,21 +20,40 @@ class CountryPopup extends React.Component {
                     <p>{country.region}</p>
                 </div>
         }
-        //myModal modal-content
+
         return (
-            <div className="ui active modal">
+            <div className="ui active modal" style={{top: 0 + '%'}}>
                 <div className="header">
                     County {countryName} additional info
                     <span className="close">&times;</span>
                 </div>
                 <div className="content">
-                    <p>{this.state.country ? this.state.country.name : '' }</p>
-                    <p>{this.state.country ? this.state.country.capital : ''}</p>
-                    <p>{this.state.country ? this.state.country.alpha2 : ''}</p>
-                    <p>{this.state.country ? this.state.country.alpha3 : ''}</p>
-                    <p>{this.state.country ? this.state.country.population : ''}</p>
-                    <p>{this.state.country ? this.state.country.region : ''}</p>
-                    {/* { this.state.country ? countryDetails(this.state.country) : null } */}
+                    <div className="ui form">
+                        <div className="inline field">
+                            <label>Country Name:</label>
+                            <input type="text" disabled="disabled" value={this.state.country ? this.state.country.name : 'Loading...' }/>
+                        </div>
+                        <div className="inline field">
+                            <label>Capital city:</label>
+                            <input type="text" disabled="disabled" value={this.state.country ? this.state.country.capital : 'Loading...' }/>
+                        </div>
+                        <div className="inline field">
+                            <label>Alpha2 Code:</label>
+                            <input type="text" disabled="disabled" value={this.state.country ? this.state.country.alpha2 : 'Loading...' }/>
+                        </div>
+                        <div className="inline field">
+                            <label>Alpha3 Code:</label>
+                            <input type="text" disabled="disabled" value={this.state.country ? this.state.country.alpha3 : 'Loading...' }/>
+                        </div>
+                        <div className="inline field">
+                            <label>Population:</label>
+                            <input type="text" disabled="disabled" value={this.state.country ? this.state.country.population : 'Loading...' }/>
+                        </div>
+                        <div className="inline field">
+                            <label>Region:</label>
+                            <input type="text" disabled="disabled" value={this.state.country ? this.state.country.region : 'Loading...' }/>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
