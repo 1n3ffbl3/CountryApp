@@ -25,10 +25,6 @@ class CountryListPagination extends React.Component {
                                     return <a className="item" key={n} onClick={() => paginationCallback(n)}>{n + 1}</a> 
                                 })
                             }
-                            {/* <a className="item" onClick={() => this.setState({countryListOffset: 0})}>1</a>
-                            <a className="item" onClick={() => this.setState({countryListOffset: 1})}>2</a>
-                            <a className="item" onClick={() => this.setState({countryListOffset: 2})}>3</a>
-                            <a className="item" onClick={() => this.setState({countryListOffset: 3})}>4</a> */}
                             <a className="icon item">
                             <i className="right chevron icon"></i>
                             </a>

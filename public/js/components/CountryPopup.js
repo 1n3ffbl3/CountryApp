@@ -1,12 +1,10 @@
 class CountryPopup extends React.Component {
-
     constructor() {
         super();
         this.state = {
             country: null
         }
     }
-
     render() {
         const countryName = this.props.country.name;
         const countryDetails = country => {
@@ -20,7 +18,6 @@ class CountryPopup extends React.Component {
                     <p>{country.region}</p>
                 </div>
         }
-
         return (
             <div className="ui active modal" style={{top: 0 + '%'}}>
                 <div className="header">
@@ -58,7 +55,6 @@ class CountryPopup extends React.Component {
             </div>
         )
     }
-
     componentDidMount(){
         console.log("Popup Mount fired");
         fetch(`https://restcountries.eu/rest/v2/name/${this.props.country.name}?fullText=true`)

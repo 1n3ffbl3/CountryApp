@@ -7,7 +7,7 @@ const PORT = 5000;
 let app = express();
 app.use(cors());
 
-//app.use('/static', express.static('public'));
+
 app.use('/static', express.static(path.join(__dirname, '/public')));
 
 app.get('/all', (req, res) => {
