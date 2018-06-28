@@ -4,11 +4,14 @@ class CountryList extends React.Component {
         
         this.state = {
             visible: false,
-            selectedCountry: ''
+            selectedCountry: '',
+            countryListSize: 10,
+            countryListOffset: 0
         }
 
         this.toggle = this.toggle.bind(this);
         this.hide = this.hide.bind(this);
+        this.updateOffset = this.updateOffset.bind(this);
     }
     
     toggle(value) {
@@ -25,6 +28,13 @@ class CountryList extends React.Component {
             visible: false
         })
     }
+
+    updateOffset(value) {
+        console.log('updateOffset() fired');
+        this.setState({
+            countryListOffset: value
+        })
+    }
     
     render() {
         const popup = (this.state.visible ? <CountryPopup country={this.state.selectedCountry} 
@@ -33,14 +43,25 @@ class CountryList extends React.Component {
             return <CountryListItem name={country.name} capital={country.capital} 
             alpha2={country.alpha2} key={country.alpha2} onClickEvent={this.toggle} />
         };
+        const countryStartIndex = () => {
+            return this.state.countryListOffset * this.state.countryListSize;
+        };
+        const countryEndIndex = () => {
+            return countryStartIndex() + this.state.countryListSize;
+        };
         return (
             <div>
                 {popup}
                 <table className="ui celled table">
                     <CountryListHeader />
                     <tbody>
-                        { this.props.countries.map(countryItem) }
+                        { this.props.countries
+                            .slice(countryStartIndex(), countryEndIndex())
+                            .map(countryItem) }
                     </tbody>
+                    <CountryListPagination offsetSize={this.state.countryListSize}
+                        countryCount={this.props.countries.length}
+                        paginationCallback={this.updateOffset} />
                 </table>
             </div>
         )
