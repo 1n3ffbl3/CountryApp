@@ -1,5 +1,3 @@
-// import React from "react";
-
 class CountryListItem extends React.Component{
     constructor() {
         super();
@@ -16,5 +14,3 @@ class CountryListItem extends React.Component{
         )
     }
 }
-
-// export default CountryListItem;

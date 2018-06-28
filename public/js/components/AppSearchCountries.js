@@ -1,6 +1,4 @@
-// import React from "react";
-// import AppHeader from "./AppHeader";
-/*export*/ class AppSearchCountries extends BaseApp {
+class AppSearchCountries extends BaseApp {
     constructor(props) {
         super(props);
         this.state = {
@@ -39,5 +37,3 @@
     }
     
 }
-
-//export default App;

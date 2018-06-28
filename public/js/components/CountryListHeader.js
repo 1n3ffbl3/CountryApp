@@ -1,5 +1,3 @@
-// import React from "react";
-
 class CountryListHeader extends React.Component{
     render(){
         return(
@@ -13,5 +11,3 @@ class CountryListHeader extends React.Component{
         )
     }
 }
-
-// export default CountryListHeader;

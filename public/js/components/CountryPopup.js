@@ -25,7 +25,7 @@ class CountryPopup extends React.Component {
             <div className="ui active modal" style={{top: 0 + '%'}}>
                 <div className="header">
                     County {countryName} additional info
-                    <span className="close">&times;</span>
+                    <span className="close" onClick={() => this.props.onCloseEvt()}>&times;</span>
                 </div>
                 <div className="content">
                     <div className="ui form">

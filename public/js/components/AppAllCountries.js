@@ -1,6 +1,4 @@
-// import React from "react";
-// import AppHeader from "./AppHeader";
-/*export*/ class AppAllCountries extends BaseApp {
+class AppAllCountries extends BaseApp {
     constructor() {
         super();
     }
@@ -15,5 +13,3 @@
     }
     
 }
-
-//export default App;

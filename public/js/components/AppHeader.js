@@ -1,5 +1,3 @@
-// import React from "react";
-
 class AppHeader extends React.Component{
     render(){
         return(
@@ -11,5 +9,3 @@ class AppHeader extends React.Component{
         )
     }
 }
-
-// export default AppHeader;
